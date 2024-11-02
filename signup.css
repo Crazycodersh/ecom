@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f8ff; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box {
+    display: none; /* Hide both initially */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #0056b3; /* Darker blue for form */
+    border-radius: 8px;
+}
+
+.form-box:first-child {
+    display: block; /* Show Sign In form by default */
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffd700; /* Gold color */
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0c200; /* Darker gold on hover */
+}
+
+.toggle {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.toggle span {
+    color: #ffd700; /* Gold color */
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.toggle span:hover {
+    color: #e0c200; /* Darker gold on hover */
+}

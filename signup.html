@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign In / Sign Up</title>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>ManaSHOP</h1>
+    <div class="form-container">
+        <div class="form-box">
+            <h2>Sign In</h2>
+            <form>
+                <div class="input-group">
+                    <label for="signin-email">Email</label>
+                    <input type="email" id="signin-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" required>
+                </div>
+                <button type="submit">Sign In</button>
+                <p class="toggle">Don't have an account? <span id="show-signup">Sign Up</span></p>
+            </form>
+        </div>
+
+        <div class="form-box">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="input-group">
+                    <label for="signup-name">Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p class="toggle">Already have an account? <span id="show-signin">Sign In</span></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const showSignup = document.getElementById('show-signup');
+    const showSignin = document.getElementById('show-signin');
+    const formBoxes = document.querySelectorAll('.form-box');
+
+    showSignup.addEventListener('click', () => {
+        formBoxes[0].style.display = 'none'; // Hide Sign In
+        formBoxes[1].style.display = 'block'; // Show Sign Up
+    });
+
+    showSignin.addEventListener('click', () => {
+        formBoxes[0].style.display = 'block'; // Show Sign In
+        formBoxes[1].style.display = 'none'; // Hide Sign Up
+    });
+</script>
+
+</body>
+</html>
